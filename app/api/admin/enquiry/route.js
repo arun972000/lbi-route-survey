@@ -241,7 +241,7 @@ export async function POST(req) {
     `;
 
     await sendBulkEmails(
-      ["arunpandian972000@gmail.com"],
+      ["kh@raceinnovations.in"],
       subject,
       message
     );

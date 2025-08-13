@@ -19,7 +19,7 @@
 
 //     await db.execute(
 //       `
-//       INSERT INTO transport_enquiries 
+//       INSERT INTO transport_enquiries
 //       (start_location, end_location, email, phone, length, width, height, weight)
 //       VALUES (?, ?, ?, ?, ?, ?, ?, ?)
 //     `,
@@ -76,7 +76,6 @@
 //     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
 //   }
 // }
-
 
 // app/api/admin/enquiry/route.js
 import { NextResponse } from "next/server";
@@ -187,10 +186,14 @@ export async function POST(req) {
       ? `
         <ul>
           <li><strong>Label:</strong> ${fromSummary.label}</li>
-          <li><strong>City/State:</strong> ${fromSummary.city || "-"} / ${fromSummary.state || "-"}</li>
+          <li><strong>City/State:</strong> ${fromSummary.city || "-"} / ${
+          fromSummary.state || "-"
+        }</li>
           <li><strong>Country:</strong> ${fromSummary.country || "-"}</li>
           <li><strong>Place ID:</strong> ${fromSummary.place_id || "-"}</li>
-          <li><strong>Coords:</strong> ${fromSummary.lat ?? "-"}, ${fromSummary.lng ?? "-"}</li>
+          <li><strong>Coords:</strong> ${fromSummary.lat ?? "-"}, ${
+          fromSummary.lng ?? "-"
+        }</li>
         </ul>`
       : `<p>${startLocation}</p>`;
 
@@ -198,10 +201,14 @@ export async function POST(req) {
       ? `
         <ul>
           <li><strong>Label:</strong> ${toSummary.label}</li>
-          <li><strong>City/State:</strong> ${toSummary.city || "-"} / ${toSummary.state || "-"}</li>
+          <li><strong>City/State:</strong> ${toSummary.city || "-"} / ${
+          toSummary.state || "-"
+        }</li>
           <li><strong>Country:</strong> ${toSummary.country || "-"}</li>
           <li><strong>Place ID:</strong> ${toSummary.place_id || "-"}</li>
-          <li><strong>Coords:</strong> ${toSummary.lat ?? "-"}, ${toSummary.lng ?? "-"}</li>
+          <li><strong>Coords:</strong> ${toSummary.lat ?? "-"}, ${
+          toSummary.lng ?? "-"
+        }</li>
         </ul>`
       : `<p>${endLocation}</p>`;
 
@@ -211,8 +218,16 @@ export async function POST(req) {
         <li><strong>Width:</strong> ${width}</li>
         <li><strong>Height:</strong> ${height}</li>
         <li><strong>Weight:</strong> ${weight}</li>
-        ${truck.volume_m3 != null ? `<li><strong>Approx Volume:</strong> ${truck.volume_m3} m³</li>` : ""}
-        ${truck.class ? `<li><strong>Truck Class:</strong> ${truck.class}</li>` : ""}
+        ${
+          truck.volume_m3 != null
+            ? `<li><strong>Approx Volume:</strong> ${truck.volume_m3} m³</li>`
+            : ""
+        }
+        ${
+          truck.class
+            ? `<li><strong>Truck Class:</strong> ${truck.class}</li>`
+            : ""
+        }
       </ul>
     `;
 
@@ -240,11 +255,7 @@ export async function POST(req) {
       </div>
     `;
 
-    await sendBulkEmails(
-      ["kh@raceinnovations.in"],
-      subject,
-      message
-    );
+    await sendBulkEmails(["arunpandian972000@gmail.com"], subject, message);
 
     return NextResponse.json(
       { message: "Enquiry submitted successfully" },
@@ -252,6 +263,9 @@ export async function POST(req) {
     );
   } catch (error) {
     console.error("Enquiry submission error:", error);
-    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Internal Server Error" },
+      { status: 500 }
+    );
   }
 }

@@ -255,7 +255,7 @@ export async function POST(req) {
       </div>
     `;
 
-    await sendBulkEmails(["arunpandian972000@gmail.com"], subject, message);
+    await sendBulkEmails(["kh@raceinnovations.in"], subject, message);
 
     return NextResponse.json(
       { message: "Enquiry submitted successfully" },

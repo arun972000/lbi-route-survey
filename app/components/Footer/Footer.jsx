@@ -42,7 +42,7 @@ export default function Footer() {
           <div className="flex items-start justify-center lg:col-span-2 lg:justify-end">
             <div className="flex items-center gap-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/raceinnovations/"
                 aria-label="Instagram"
                 className="transition hover:opacity-80"
                 target="_blank"
@@ -65,7 +65,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/raceinnovationspvtltd/"
                 aria-label="Facebook"
                 className="transition hover:opacity-80"
                 target="_blank"
@@ -78,7 +78,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://x.com"
+                href="https://x.com/raceinnovations"
                 aria-label="X"
                 className="transition hover:opacity-80"
                 target="_blank"
@@ -91,7 +91,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/race-innovations-private-limited/"
                 aria-label="LinkedIn"
                 className="transition hover:opacity-80"
                 target="_blank"
@@ -113,10 +113,10 @@ export default function Footer() {
             © {year} Race Innovations — All Rights Reserved
           </p>
           <nav className="col-span-3 mt-4 flex items-center justify-center gap-8 text-sm font-medium text-gray-700 sm:col-span-1 sm:mt-0 sm:justify-end">
-            <Link href="/about" className="hover:text-blue-800">About Us</Link>
-            <Link href="/careers" className="hover:text-blue-800">Careers</Link>
-            <Link href="/contact" className="hover:text-blue-800">Contact</Link>
-            <Link href="/investors" className="hover:text-blue-800">Investor</Link>
+            <Link href="https://raceinnovations.in/about-us/vision-mission" className="hover:text-blue-800">About Us</Link>
+            <Link href="https://raceinnovations.in/career" className="hover:text-blue-800">Careers</Link>
+            <Link href="https://raceinnovations.in/contact" className="hover:text-blue-800">Contact</Link>
+            <Link href="https://raceinnovations.in/about-us/investors" className="hover:text-blue-800">Investor</Link>
           </nav>
         </div>
       </div>

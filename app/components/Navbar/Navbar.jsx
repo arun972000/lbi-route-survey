@@ -140,18 +140,18 @@ export default function Navbar() {
               {/* Right actions */}
               <div className="hidden lg:flex lg:items-center lg:gap-3">
                 <Link
-                  href="/corporate-profile"
+                  href="https://raceinnovations.in/corporate-profile"
                   className="rounded-full bg-blue-700 px-5 py-2 text-sm font-semibold text-white hover:bg-blue-800 focus:outline-none"
                 >
                   Corporate Profile
                 </Link>
-                <button
+                {/* <button
                   type="button"
                   aria-label="Call"
                   className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-black ring-1 ring-gray-300 hover:bg-gray-50 focus:outline-none"
                 >
                   <PhoneIcon className="h-5 w-5" aria-hidden="true" />
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
